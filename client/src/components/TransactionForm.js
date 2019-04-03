@@ -36,6 +36,7 @@ class TransactionForm extends React.Component {
             <input
               name="transaction"
               type="text"
+              value={this.state.transaction}
               onChange={this.onChange}
              />
           </div>
@@ -45,6 +46,7 @@ class TransactionForm extends React.Component {
             <input
               name="description"
               type="text"
+              value={this.state.description}
               onChange={this.onChange}
             />
           </div>
@@ -54,6 +56,7 @@ class TransactionForm extends React.Component {
             <input
               name="amount"
               type="text"
+              value={this.state.amount}
               onChange={this.onChange}
             />
           </div>

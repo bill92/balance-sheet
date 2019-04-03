@@ -19,6 +19,7 @@ router.get('/', (req, res) => {
 //Add new transaction
 router.post('/', (req, res) => {
   const {errors, isValid} = validateTransactionInput(req.body);
+  console.log(req.body)
 
   if(!isValid){
     return res.status(400).json(errors)
@@ -28,7 +29,7 @@ router.post('/', (req, res) => {
     transaction: req.body.transaction,
     description: req.body.description,
     amount: req.body.amount,
-    transactionType: req.body.transactiontype
+    transactionType: req.body.transactionType
   });
 
   newTransaction.save().then(transaction => res.json(transaction));

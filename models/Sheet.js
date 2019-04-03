@@ -17,7 +17,7 @@ const SheetSchema = new Schema({
     },
     date: {
       type: Date,
-      default: Date.Now
+      default: Date.now
     }
 })
 
